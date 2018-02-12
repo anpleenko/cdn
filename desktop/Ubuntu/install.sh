@@ -19,7 +19,7 @@ echo "alias ....='cd ../../..'" >> ~/.zshrc
 echo "alias c='clear'" >> ~/.zshrc
 echo "alias del='sudo rm -rf'" >> ~/.zshrc
 echo "alias sources='source ~/.zshrc'" >> ~/.zshrc
-source ~/.zshrc
+# source ~/.zshrc
 
 # install google chrome
 # http://help.ubuntu.ru/wiki/google_chrome
