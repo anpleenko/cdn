@@ -4,7 +4,14 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install mc zsh vim git -y
 
+# setup git
+# select push
 git config --global push.default simple
+# set global gitignore file
+git config --global core.excludesfile ~/.gitignore
+touch ~/.gitignore
+echo "node_modules/" >> ~/.gitignore
+echo ".idea/" >> ~/.gitignore
 
 echo "alias ..='cd ..'" >> ~/.zshrc
 echo "alias ...='cd ../..'" >> ~/.zshrc
