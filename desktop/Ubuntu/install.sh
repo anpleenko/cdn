@@ -2,7 +2,9 @@
 cd ~
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install mc zsh vim -y
+sudo apt-get install mc zsh vim git -y
+
+git config --global push.default simple
 
 echo "alias ..='cd ..'" >> ~/.zshrc
 echo "alias ...='cd ../..'" >> ~/.zshrc
