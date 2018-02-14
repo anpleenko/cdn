@@ -4,6 +4,9 @@ sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install mc zsh vim git -y
 
+# set sudo without password
+# sudo echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 # setup git
 # select push
 git config --global push.default simple
@@ -12,6 +15,10 @@ git config --global core.excludesfile ~/.gitignore
 touch ~/.gitignore
 echo "node_modules/" >> ~/.gitignore
 echo ".idea/" >> ~/.gitignore
+echo "npm-debug.log" >> ~/.gitignore
+echo ".DS_Store" >> ~/.gitignore
+echo "yarn-error.log" >> ~/.gitignore
+echo "yarn-error.log" >> ~/.gitignore
 
 echo "alias ..='cd ..'" >> ~/.zshrc
 echo "alias ...='cd ../..'" >> ~/.zshrc
@@ -82,6 +89,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 # install vim config
 curl https://raw.githubusercontent.com/vaeum/cdn/master/server/vim/vimrc > ~/.vimrc
 
+sudo apt-get clean
+
+# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-sudo apt-get clean
