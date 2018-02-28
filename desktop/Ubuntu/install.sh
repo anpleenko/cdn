@@ -50,9 +50,9 @@ sudo apt-get install sublime-text -y
 
 # install atom
 # http://www.webupd8.org/2014/06/atom-text-editor-available-for-linux.html
-sudo add-apt-repository ppa:webupd8team/atom -y
-sudo apt-get update
-sudo apt-get install atom -y
+# sudo add-apt-repository ppa:webupd8team/atom -y
+# sudo apt-get update
+# sudo apt-get install atom -y
 
 # install telegram
 # https://launchpad.net/~atareao/+archive/ubuntu/telegram
