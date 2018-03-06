@@ -17,6 +17,7 @@ services:
   mongo_db:
     container_name: mongo_db
     image: mongo:3
+    restart: always
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
@@ -28,6 +29,7 @@ services:
   redis:
     container_name: redis
     image: redis:4
+    restart: always
     ports:
       - "4503:6379"
     volumes:
