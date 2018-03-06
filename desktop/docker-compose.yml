@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+  postgres_sql:
+    container_name: postgres_sql
+    image: postgres:10
+    restart: always
+    ports:
+      - "4565:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      # POSTGRES_DB: db
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql
+
+  mongo_db:
+    container_name: mongo_db
+    image: mongo:3
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - /srv/docker/mongodb:/data/db
+    ports:
+      - "4566:27017"
