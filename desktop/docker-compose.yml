@@ -6,7 +6,7 @@ services:
     image: postgres:10
     restart: always
     ports:
-      - "4565:5432"
+      - "4501:5432"
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: user
@@ -23,4 +23,12 @@ services:
     volumes:
       - /srv/docker/mongodb:/data/db
     ports:
-      - "4566:27017"
+      - "4502:27017"
+
+  redis:
+    container_name: redis
+    image: redis:4
+    ports:
+      - "4503:6379"
+    volumes:
+      - /srv/docker/redis:/data
